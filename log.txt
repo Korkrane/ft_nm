@@ -1,0 +1,1185 @@
+64 formatELF
+e_type 2
+e_machine 62
+e_version 1
+e_entry 4198624
+e_phoff 64
+e_shoff 28744
+e_flags 0
+e_ehsize 64
+e_phentsize 56
+e_phnum 11
+e_shentsize 64
+e_shnum 33
+e_shstrndx 32
+---- Section 0 -----
+Section name = 0 ()
+Section type = 0
+Section flags = 0
+Section addr = 0
+Section offset = 0
+Section size = 0
+Section link = 0
+Section info = 0
+Section addralign = 0
+Section entsize = 0
+---- Section 1 -----
+Section name = 27 (.interp)
+Section type = 1
+Section flags = 2
+Section addr = 4194984
+Section offset = 680
+Section size = 28
+Section link = 0
+Section info = 0
+Section addralign = 1
+Section entsize = 0
+---- Section 2 -----
+Section name = 35 (.note.gnu.build-id)
+Section type = 7
+Section flags = 2
+Section addr = 4195012
+Section offset = 708
+Section size = 36
+Section link = 0
+Section info = 0
+Section addralign = 4
+Section entsize = 0
+---- Section 3 -----
+Section name = 54 (.note.ABI-tag)
+Section type = 7
+Section flags = 2
+Section addr = 4195048
+Section offset = 744
+Section size = 32
+Section link = 0
+Section info = 0
+Section addralign = 4
+Section entsize = 0
+---- Section 4 -----
+Section name = 68 (.gnu.hash)
+Section type = 1879048182
+Section flags = 2
+Section addr = 4195080
+Section offset = 776
+Section size = 36
+Section link = 5
+Section info = 0
+Section addralign = 8
+Section entsize = 0
+---- Section 5 -----
+Section name = 78 (.dynsym)
+Section type = 11
+Section flags = 2
+Section addr = 4195120
+Section offset = 816
+Section size = 360
+Section link = 6
+Section info = 1
+Section addralign = 8
+Section entsize = 24
+---- Section 6 -----
+Section name = 86 (.dynstr)
+Section type = 3
+Section flags = 2
+Section addr = 4195480
+Section offset = 1176
+Section size = 143
+Section link = 0
+Section info = 0
+Section addralign = 1
+Section entsize = 0
+---- Section 7 -----
+Section name = 94 (.gnu.version)
+Section type = 1879048191
+Section flags = 2
+Section addr = 4195624
+Section offset = 1320
+Section size = 30
+Section link = 5
+Section info = 0
+Section addralign = 2
+Section entsize = 2
+---- Section 8 -----
+Section name = 107 (.gnu.version_r)
+Section type = 1879048190
+Section flags = 2
+Section addr = 4195656
+Section offset = 1352
+Section size = 32
+Section link = 6
+Section info = 1
+Section addralign = 8
+Section entsize = 0
+---- Section 9 -----
+Section name = 122 (.rela.dyn)
+Section type = 4
+Section flags = 2
+Section addr = 4195688
+Section offset = 1384
+Section size = 72
+Section link = 5
+Section info = 0
+Section addralign = 8
+Section entsize = 24
+---- Section 10 -----
+Section name = 132 (.rela.plt)
+Section type = 4
+Section flags = 66
+Section addr = 4195760
+Section offset = 1456
+Section size = 264
+Section link = 5
+Section info = 22
+Section addralign = 8
+Section entsize = 24
+---- Section 11 -----
+Section name = 142 (.init)
+Section type = 1
+Section flags = 6
+Section addr = 4198400
+Section offset = 4096
+Section size = 27
+Section link = 0
+Section info = 0
+Section addralign = 4
+Section entsize = 0
+---- Section 12 -----
+Section name = 137 (.plt)
+Section type = 1
+Section flags = 6
+Section addr = 4198432
+Section offset = 4128
+Section size = 192
+Section link = 0
+Section info = 0
+Section addralign = 16
+Section entsize = 16
+---- Section 13 -----
+Section name = 148 (.text)
+Section type = 1
+Section flags = 6
+Section addr = 4198624
+Section offset = 4320
+Section size = 6291
+Section link = 0
+Section info = 0
+Section addralign = 16
+Section entsize = 0
+---- Section 14 -----
+Section name = 154 (.fini)
+Section type = 1
+Section flags = 6
+Section addr = 4204916
+Section offset = 10612
+Section size = 13
+Section link = 0
+Section info = 0
+Section addralign = 4
+Section entsize = 0
+---- Section 15 -----
+Section name = 160 (.rodata)
+Section type = 1
+Section flags = 2
+Section addr = 4206592
+Section offset = 12288
+Section size = 743
+Section link = 0
+Section info = 0
+Section addralign = 4
+Section entsize = 0
+---- Section 16 -----
+Section name = 168 (.eh_frame_hdr)
+Section type = 1
+Section flags = 2
+Section addr = 4207336
+Section offset = 13032
+Section size = 292
+Section link = 0
+Section info = 0
+Section addralign = 4
+Section entsize = 0
+---- Section 17 -----
+Section name = 182 (.eh_frame)
+Section type = 1
+Section flags = 2
+Section addr = 4207632
+Section offset = 13328
+Section size = 1152
+Section link = 0
+Section info = 0
+Section addralign = 8
+Section entsize = 0
+---- Section 18 -----
+Section name = 192 (.init_array)
+Section type = 14
+Section flags = 3
+Section addr = 4214272
+Section offset = 15872
+Section size = 8
+Section link = 0
+Section info = 0
+Section addralign = 8
+Section entsize = 8
+---- Section 19 -----
+Section name = 204 (.fini_array)
+Section type = 15
+Section flags = 3
+Section addr = 4214280
+Section offset = 15880
+Section size = 8
+Section link = 0
+Section info = 0
+Section addralign = 8
+Section entsize = 8
+---- Section 20 -----
+Section name = 216 (.dynamic)
+Section type = 6
+Section flags = 3
+Section addr = 4214288
+Section offset = 15888
+Section size = 480
+Section link = 6
+Section info = 0
+Section addralign = 8
+Section entsize = 16
+---- Section 21 -----
+Section name = 225 (.got)
+Section type = 1
+Section flags = 3
+Section addr = 4214768
+Section offset = 16368
+Section size = 16
+Section link = 0
+Section info = 0
+Section addralign = 8
+Section entsize = 8
+---- Section 22 -----
+Section name = 230 (.got.plt)
+Section type = 1
+Section flags = 3
+Section addr = 4214784
+Section offset = 16384
+Section size = 112
+Section link = 0
+Section info = 0
+Section addralign = 8
+Section entsize = 8
+---- Section 23 -----
+Section name = 239 (.data)
+Section type = 1
+Section flags = 3
+Section addr = 4214896
+Section offset = 16496
+Section size = 16
+Section link = 0
+Section info = 0
+Section addralign = 8
+Section entsize = 0
+---- Section 24 -----
+Section name = 245 (.bss)
+Section type = 8
+Section flags = 3
+Section addr = 4214912
+Section offset = 16512
+Section size = 16
+Section link = 0
+Section info = 0
+Section addralign = 32
+Section entsize = 0
+---- Section 25 -----
+Section name = 250 (.comment)
+Section type = 1
+Section flags = 48
+Section addr = 0
+Section offset = 16512
+Section size = 88
+Section link = 0
+Section info = 0
+Section addralign = 1
+Section entsize = 1
+---- Section 26 -----
+Section name = 259 (.debug_info)
+Section type = 1
+Section flags = 0
+Section addr = 0
+Section offset = 16600
+Section size = 3343
+Section link = 0
+Section info = 0
+Section addralign = 1
+Section entsize = 0
+---- Section 27 -----
+Section name = 271 (.debug_abbrev)
+Section type = 1
+Section flags = 0
+Section addr = 0
+Section offset = 19943
+Section size = 581
+Section link = 0
+Section info = 0
+Section addralign = 1
+Section entsize = 0
+---- Section 28 -----
+Section name = 285 (.debug_line)
+Section type = 1
+Section flags = 0
+Section addr = 0
+Section offset = 20524
+Section size = 2646
+Section link = 0
+Section info = 0
+Section addralign = 1
+Section entsize = 0
+---- Section 29 -----
+Section name = 297 (.debug_str)
+Section type = 1
+Section flags = 48
+Section addr = 0
+Section offset = 23170
+Section size = 1282
+Section link = 0
+Section info = 0
+Section addralign = 1
+Section entsize = 1
+---- Section 30 -----
+Section name = 1 (.symtab)
+Section type = 2
+Section flags = 0
+Section addr = 0
+Section offset = 24456
+Section size = 2832
+Section link = 31
+Section info = 61
+Section addralign = 8
+Section entsize = 24
+----------
+st_name 0 ()
+st_info 0
+st_other 0
+st_shndx 0
+st_value 0 (0000000000000000)
+st_size 0
+ELF64_ST_TYPE: 0, ELF64_ST_BIND:0
+LOCAL
+0000000000000000 
+----------
+st_name 12 (deregister_tm_clones)
+st_info 2
+st_other 0
+st_shndx 13
+st_value 4198688 (0000000000401120)
+st_size 0
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:0
+LOCAL
+0000000000401120 deregister_tm_clones
+----------
+st_name 14 (register_tm_clones)
+st_info 2
+st_other 0
+st_shndx 13
+st_value 4198736 (0000000000401150)
+st_size 0
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:0
+LOCAL
+0000000000401150 register_tm_clones
+----------
+st_name 33 (__do_global_dtors_aux)
+st_info 2
+st_other 0
+st_shndx 13
+st_value 4198800 (0000000000401190)
+st_size 0
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:0
+LOCAL
+0000000000401190 __do_global_dtors_aux
+----------
+st_name 55 (completed.0)
+st_info 1
+st_other 0
+st_shndx 24
+st_value 4214920 (0000000000405088)
+st_size 1
+ELF64_ST_TYPE: 1, ELF64_ST_BIND:0
+LOCAL
+0000000000405088 completed.0
+----------
+st_name 67 (__do_global_dtors_aux_fini_array_entry)
+st_info 1
+st_other 0
+st_shndx 19
+st_value 4214280 (0000000000404e08)
+st_size 0
+ELF64_ST_TYPE: 1, ELF64_ST_BIND:0
+LOCAL
+0000000000404e08 __do_global_dtors_aux_fini_array_entry
+----------
+st_name 106 (frame_dummy)
+st_info 2
+st_other 0
+st_shndx 13
+st_value 4198848 (00000000004011c0)
+st_size 0
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:0
+LOCAL
+00000000004011c0 frame_dummy
+----------
+st_name 118 (__frame_dummy_init_array_entry)
+st_info 1
+st_other 0
+st_shndx 18
+st_value 4214272 (0000000000404e00)
+st_size 0
+ELF64_ST_TYPE: 1, ELF64_ST_BIND:0
+LOCAL
+0000000000404e00 __frame_dummy_init_array_entry
+----------
+st_name 246 (ft_strcpy_join)
+st_info 2
+st_other 0
+st_shndx 13
+st_value 4203920 (0000000000402590)
+st_size 95
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:0
+LOCAL
+0000000000402590 ft_strcpy_join
+----------
+st_name 261 (ft_strncat_join)
+st_info 2
+st_other 0
+st_shndx 13
+st_value 4204016 (00000000004025f0)
+st_size 190
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:0
+LOCAL
+00000000004025f0 ft_strncat_join
+----------
+st_name 329 (__FRAME_END__)
+st_info 1
+st_other 0
+st_shndx 17
+st_value 4208780 (000000000040388c)
+st_size 0
+ELF64_ST_TYPE: 1, ELF64_ST_BIND:0
+LOCAL
+000000000040388c __FRAME_END__
+----------
+st_name 343 (__init_array_end)
+st_info 0
+st_other 0
+st_shndx 18
+st_value 4214280 (0000000000404e08)
+st_size 0
+ELF64_ST_TYPE: 0, ELF64_ST_BIND:0
+LOCAL
+0000000000404e08 __init_array_end
+----------
+st_name 360 (_DYNAMIC)
+st_info 1
+st_other 0
+st_shndx 20
+st_value 4214288 (0000000000404e10)
+st_size 0
+ELF64_ST_TYPE: 1, ELF64_ST_BIND:0
+LOCAL
+0000000000404e10 _DYNAMIC
+----------
+st_name 369 (__init_array_start)
+st_info 0
+st_other 0
+st_shndx 18
+st_value 4214272 (0000000000404e00)
+st_size 0
+ELF64_ST_TYPE: 0, ELF64_ST_BIND:0
+LOCAL
+0000000000404e00 __init_array_start
+----------
+st_name 388 (__GNU_EH_FRAME_HDR)
+st_info 0
+st_other 0
+st_shndx 16
+st_value 4207336 (00000000004032e8)
+st_size 0
+ELF64_ST_TYPE: 0, ELF64_ST_BIND:0
+LOCAL
+00000000004032e8 __GNU_EH_FRAME_HDR
+----------
+st_name 407 (_GLOBAL_OFFSET_TABLE_)
+st_info 1
+st_other 0
+st_shndx 22
+st_value 4214784 (0000000000405000)
+st_size 0
+ELF64_ST_TYPE: 1, ELF64_ST_BIND:0
+LOCAL
+0000000000405000 _GLOBAL_OFFSET_TABLE_
+----------
+st_name 429 (__libc_csu_fini)
+st_info 18
+st_other 0
+st_shndx 13
+st_value 4204880 (0000000000402950)
+st_size 5
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000402950 __libc_csu_fini
+----------
+st_name 625 (data_start)
+st_info 32
+st_other 0
+st_shndx 23
+st_value 4214896 (0000000000405070)
+st_size 0
+ELF64_ST_TYPE: 0, ELF64_ST_BIND:2
+WEAK
+0000000000405070 data_start
+----------
+st_name 445 (hex_value)
+st_info 18
+st_other 0
+st_shndx 13
+st_value 4200816 (0000000000401970)
+st_size 125
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000401970 hex_value
+----------
+st_name 455 (ft_strlower)
+st_info 18
+st_other 0
+st_shndx 13
+st_value 4204320 (0000000000402720)
+st_size 123
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000402720 ft_strlower
+----------
+st_name 467 (logPrintSymbol)
+st_info 18
+st_other 0
+st_shndx 13
+st_value 4199552 (0000000000401480)
+st_size 464
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000401480 logPrintSymbol
+----------
+st_name 482 (ft_bzero)
+st_info 18
+st_other 0
+st_shndx 13
+st_value 4203296 (0000000000402320)
+st_size 64
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000402320 ft_bzero
+----------
+st_name 491 (ft_strlen)
+st_info 18
+st_other 0
+st_shndx 13
+st_value 4203360 (0000000000402360)
+st_size 85
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000402360 ft_strlen
+----------
+st_name 501 (_edata)
+st_info 16
+st_other 0
+st_shndx 23
+st_value 4214912 (0000000000405080)
+st_size 0
+ELF64_ST_TYPE: 0, ELF64_ST_BIND:1
+GLOBAL
+0000000000405080 _edata
+----------
+st_name 439 (_fini)
+st_info 18
+st_other 2
+st_shndx 14
+st_value 4204916 (0000000000402974)
+st_size 0
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000402974 _fini
+----------
+st_name 508 (strlen@@GLIBC_2.2.5)
+st_info 18
+st_other 0
+st_shndx 0
+st_value 0 (0000000000000000)
+st_size 0
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000000000 strlen@@GLIBC_2.2.5
+----------
+st_name 528 (mmap@@GLIBC_2.2.5)
+st_info 18
+st_other 0
+st_shndx 0
+st_value 0 (0000000000000000)
+st_size 0
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000000000 mmap@@GLIBC_2.2.5
+----------
+st_name 657 (printf@@GLIBC_2.2.5)
+st_info 18
+st_other 0
+st_shndx 0
+st_value 0 (0000000000000000)
+st_size 0
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000000000 printf@@GLIBC_2.2.5
+----------
+st_name 546 (symlist_display)
+st_info 18
+st_other 0
+st_shndx 13
+st_value 4200336 (0000000000401790)
+st_size 163
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000401790 symlist_display
+----------
+st_name 562 (ft_symnew)
+st_info 18
+st_other 0
+st_shndx 13
+st_value 4200016 (0000000000401650)
+st_size 119
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000401650 ft_symnew
+----------
+st_name 978 (fstat)
+st_info 34
+st_other 2
+st_shndx 13
+st_value 4204896 (0000000000402960)
+st_size 19
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:2
+WEAK
+0000000000402960 fstat
+----------
+st_name 572 (handle_32)
+st_info 18
+st_other 0
+st_shndx 13
+st_value 4202480 (0000000000401ff0)
+st_size 10
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000401ff0 handle_32
+----------
+st_name 582 (ft_memset)
+st_info 18
+st_other 0
+st_shndx 13
+st_value 4203104 (0000000000402260)
+st_size 75
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000402260 ft_memset
+----------
+st_name 592 (__libc_start_main@@GLIBC_2.2.5)
+st_info 18
+st_other 0
+st_shndx 0
+st_value 0 (0000000000000000)
+st_size 0
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000000000 __libc_start_main@@GLIBC_2.2.5
+----------
+st_name 623 (__data_start)
+st_info 16
+st_other 0
+st_shndx 23
+st_value 4214896 (0000000000405070)
+st_size 0
+ELF64_ST_TYPE: 0, ELF64_ST_BIND:1
+GLOBAL
+0000000000405070 __data_start
+----------
+st_name 636 (strcmp@@GLIBC_2.2.5)
+st_info 18
+st_other 0
+st_shndx 0
+st_value 0 (0000000000000000)
+st_size 0
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000000000 strcmp@@GLIBC_2.2.5
+----------
+st_name 656 (fprintf@@GLIBC_2.2.5)
+st_info 18
+st_other 0
+st_shndx 0
+st_value 0 (0000000000000000)
+st_size 0
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000000000 fprintf@@GLIBC_2.2.5
+----------
+st_name 677 (__gmon_start__)
+st_info 32
+st_other 0
+st_shndx 0
+st_value 0 (0000000000000000)
+st_size 0
+ELF64_ST_TYPE: 0, ELF64_ST_BIND:2
+WEAK
+0000000000000000 __gmon_start__
+----------
+st_name 692 (__dso_handle)
+st_info 17
+st_other 2
+st_shndx 23
+st_value 4214904 (0000000000405078)
+st_size 0
+ELF64_ST_TYPE: 1, ELF64_ST_BIND:1
+GLOBAL
+0000000000405078 __dso_handle
+----------
+st_name 705 (ft_symadd_back)
+st_info 18
+st_other 0
+st_shndx 13
+st_value 4200240 (0000000000401730)
+st_size 91
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000401730 ft_symadd_back
+----------
+st_name 720 (sort_symlist)
+st_info 18
+st_other 0
+st_shndx 13
+st_value 4200704 (0000000000401900)
+st_size 97
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000401900 sort_symlist
+----------
+st_name 733 (_IO_stdin_used)
+st_info 17
+st_other 0
+st_shndx 15
+st_value 4206592 (0000000000403000)
+st_size 4
+ELF64_ST_TYPE: 1, ELF64_ST_BIND:1
+GLOBAL
+0000000000403000 _IO_stdin_used
+----------
+st_name 748 (compSectionName)
+st_info 18
+st_other 0
+st_shndx 13
+st_value 4201104 (0000000000401a90)
+st_size 15
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000401a90 compSectionName
+----------
+st_name 764 (set_symbol)
+st_info 18
+st_other 0
+st_shndx 13
+st_value 4201120 (0000000000401aa0)
+st_size 764
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000401aa0 set_symbol
+----------
+st_name 775 (save_first_letter)
+st_info 18
+st_other 0
+st_shndx 13
+st_value 4200944 (00000000004019f0)
+st_size 151
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+00000000004019f0 save_first_letter
+----------
+st_name 793 (ft_strdup)
+st_info 18
+st_other 0
+st_shndx 13
+st_value 4203456 (00000000004023c0)
+st_size 211
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+00000000004023c0 ft_strdup
+----------
+st_name 803 (__libc_csu_init)
+st_info 18
+st_other 0
+st_shndx 13
+st_value 4204768 (00000000004028e0)
+st_size 101
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+00000000004028e0 __libc_csu_init
+----------
+st_name 819 (malloc@@GLIBC_2.2.5)
+st_info 18
+st_other 0
+st_shndx 0
+st_value 0 (0000000000000000)
+st_size 0
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000000000 malloc@@GLIBC_2.2.5
+----------
+st_name 839 (__fxstat@@GLIBC_2.2.5)
+st_info 18
+st_other 0
+st_shndx 0
+st_value 0 (0000000000000000)
+st_size 0
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000000000 __fxstat@@GLIBC_2.2.5
+----------
+st_name 861 (nm)
+st_info 18
+st_other 0
+st_shndx 13
+st_value 4202496 (0000000000402000)
+st_size 257
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000402000 nm
+----------
+st_name 355 (_end)
+st_info 16
+st_other 0
+st_shndx 24
+st_value 4214928 (0000000000405090)
+st_size 0
+ELF64_ST_TYPE: 0, ELF64_ST_BIND:1
+GLOBAL
+0000000000405090 _end
+----------
+st_name 864 (_dl_relocate_static_pie)
+st_info 18
+st_other 2
+st_shndx 13
+st_value 4198672 (0000000000401110)
+st_size 5
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000401110 _dl_relocate_static_pie
+----------
+st_name 629 (_start)
+st_info 18
+st_other 0
+st_shndx 13
+st_value 4198624 (00000000004010e0)
+st_size 47
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+00000000004010e0 _start
+----------
+st_name 888 (ft_memalloc)
+st_info 18
+st_other 0
+st_shndx 13
+st_value 4203184 (00000000004022b0)
+st_size 104
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+00000000004022b0 ft_memalloc
+----------
+st_name 900 (__bss_start)
+st_info 16
+st_other 0
+st_shndx 24
+st_value 4214912 (0000000000405080)
+st_size 0
+ELF64_ST_TYPE: 0, ELF64_ST_BIND:1
+GLOBAL
+0000000000405080 __bss_start
+----------
+st_name 912 (munmap@@GLIBC_2.2.5)
+st_info 18
+st_other 0
+st_shndx 0
+st_value 0 (0000000000000000)
+st_size 0
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000000000 munmap@@GLIBC_2.2.5
+lol
+lol
+lol
+Section name = 1 (.symtab)
+Section name = 148 (.text)
+----------
+st_name 932 (main)
+st_info 18
+st_other 0
+st_shndx 13
+st_value 4202768 (0000000000402110)
+st_size 334
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000402110 main
+----------
+st_name 937 (ft_strcmp)
+st_info 18
+st_other 0
+st_shndx 13
+st_value 4204208 (00000000004026b0)
+st_size 98
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+00000000004026b0 ft_strcmp
+----------
+st_name 947 (ft_tolower)
+st_info 18
+st_other 0
+st_shndx 13
+st_value 4204720 (00000000004028b0)
+st_size 41
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+00000000004028b0 ft_tolower
+----------
+st_name 958 (open@@GLIBC_2.2.5)
+st_info 18
+st_other 0
+st_shndx 0
+st_value 0 (0000000000000000)
+st_size 0
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000000000 open@@GLIBC_2.2.5
+----------
+st_name 976 (__fstat)
+st_info 18
+st_other 2
+st_shndx 13
+st_value 4204896 (0000000000402960)
+st_size 19
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000402960 __fstat
+----------
+st_name 984 (ft_symlast)
+st_info 18
+st_other 0
+st_shndx 13
+st_value 4200144 (00000000004016d0)
+st_size 83
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+00000000004016d0 ft_symlast
+----------
+st_name 995 (perror@@GLIBC_2.2.5)
+st_info 18
+st_other 0
+st_shndx 0
+st_value 0 (0000000000000000)
+st_size 0
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000000000 perror@@GLIBC_2.2.5
+----------
+st_name 1015 (ft_strjoin)
+st_info 18
+st_other 0
+st_shndx 13
+st_value 4203680 (00000000004024a0)
+st_size 225
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+00000000004024a0 ft_strjoin
+----------
+st_name 1026 (logPrintSection)
+st_info 18
+st_other 0
+st_shndx 13
+st_value 4199232 (0000000000401340)
+st_size 315
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000401340 logPrintSection
+----------
+st_name 1042 (ft_strncmp)
+st_info 18
+st_other 0
+st_shndx 13
+st_value 4204448 (00000000004027a0)
+st_size 265
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+00000000004027a0 ft_strncmp
+----------
+st_name 1053 (sprintf@@GLIBC_2.2.5)
+st_info 18
+st_other 0
+st_shndx 0
+st_value 0 (0000000000000000)
+st_size 0
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000000000 sprintf@@GLIBC_2.2.5
+----------
+st_name 1074 (__TMC_END__)
+st_info 17
+st_other 2
+st_shndx 23
+st_value 4214912 (0000000000405080)
+st_size 0
+ELF64_ST_TYPE: 1, ELF64_ST_BIND:1
+GLOBAL
+0000000000405080 __TMC_END__
+----------
+st_name 1086 (sortedInsert)
+st_info 18
+st_other 0
+st_shndx 13
+st_value 4200512 (0000000000401840)
+st_size 191
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000401840 sortedInsert
+----------
+st_name 1099 (logPrintHeader)
+st_info 18
+st_other 0
+st_shndx 13
+st_value 4198864 (00000000004011d0)
+st_size 362
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+00000000004011d0 logPrintHeader
+----------
+st_name 813 (_init)
+st_info 18
+st_other 2
+st_shndx 11
+st_value 4198400 (0000000000401000)
+st_size 0
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000401000 _init
+----------
+st_name 1114 (handle_64)
+st_info 18
+st_other 0
+st_shndx 13
+st_value 4201888 (0000000000401da0)
+st_size 592
+ELF64_ST_TYPE: 2, ELF64_ST_BIND:1
+GLOBAL
+0000000000401da0 handle_64
+----------
+st_name 1124 (stderr@@GLIBC_2.2.5)
+st_info 17
+st_other 0
+st_shndx 24
+st_value 4214912 (0000000000405080)
+st_size 8
+ELF64_ST_TYPE: 1, ELF64_ST_BIND:1
+GLOBAL
+0000000000405080 stderr@@GLIBC_2.2.5
+---- Section 31 -----
+Section name = 9 (.strtab)
+Section type = 3
+Section flags = 0
+Section addr = 0
+Section offset = 27288
+Section size = 1144
+Section link = 0
+Section info = 0
+Section addralign = 1
+Section entsize = 0
+---- Section 32 -----
+Section name = 17 (.shstrtab)
+Section type = 3
+Section flags = 0
+Section addr = 0
+Section offset = 28432
+Section size = 308
+Section link = 0
+Section info = 0
+Section addralign = 1
+Section entsize = 0
+0000000000405080 B __bss_start
+0000000000405088 b completed.0
+0000000000401a90 T compSectionName
+0000000000405070 D __data_start
+0000000000405070 W data_start
+0000000000401120 t deregister_tm_clones
+0000000000401110 T _dl_relocate_static_pie
+0000000000401190 t __do_global_dtors_aux
+0000000000404e08 . __do_global_dtors_aux_fini_array_entry
+0000000000405078 D __dso_handle
+0000000000404e10 . _DYNAMIC
+0000000000405080 D _edata
+0000000000405090 B _end
+0000000000402974 . _fini
+                 U fprintf@@GLIBC_2.2.5
+00000000004011c0 t frame_dummy
+0000000000404e00 . __frame_dummy_init_array_entry
+000000000040388c . __FRAME_END__
+0000000000402960 T __fstat
+0000000000402960 W fstat
+0000000000402320 T ft_bzero
+00000000004022b0 T ft_memalloc
+0000000000402260 T ft_memset
+00000000004026b0 T ft_strcmp
+0000000000402590 t ft_strcpy_join
+00000000004023c0 T ft_strdup
+00000000004024a0 T ft_strjoin
+0000000000402360 T ft_strlen
+0000000000402720 T ft_strlower
+00000000004025f0 t ft_strncat_join
+00000000004027a0 T ft_strncmp
+0000000000401730 T ft_symadd_back
+00000000004016d0 T ft_symlast
+0000000000401650 T ft_symnew
+00000000004028b0 T ft_tolower
+                 U __fxstat@@GLIBC_2.2.5
+0000000000405000 . _GLOBAL_OFFSET_TABLE_
+                 w __gmon_start__
+00000000004032e8 . __GNU_EH_FRAME_HDR
+0000000000401ff0 T handle_32
+0000000000401da0 T handle_64
+0000000000401970 T hex_value
+0000000000401000 . _init
+0000000000404e08 . __init_array_end
+0000000000404e00 . __init_array_start
+0000000000403000 . _IO_stdin_used
+0000000000402950 T __libc_csu_fini
+00000000004028e0 T __libc_csu_init
+                 U __libc_start_main@@GLIBC_2.2.5
+00000000004011d0 T logPrintHeader
+0000000000401340 T logPrintSection
+0000000000401480 T logPrintSymbol
+0000000000402110 T main
+                 U malloc@@GLIBC_2.2.5
+                 U mmap@@GLIBC_2.2.5
+                 U munmap@@GLIBC_2.2.5
+0000000000402000 T nm
+                 U open@@GLIBC_2.2.5
+                 U perror@@GLIBC_2.2.5
+                 U printf@@GLIBC_2.2.5
+0000000000401150 t register_tm_clones
+00000000004019f0 T save_first_letter
+0000000000401aa0 T set_symbol
+0000000000401900 T sort_symlist
+0000000000401840 T sortedInsert
+                 U sprintf@@GLIBC_2.2.5
+00000000004010e0 T _start
+0000000000405080 B stderr@@GLIBC_2.2.5
+                 U strcmp@@GLIBC_2.2.5
+                 U strlen@@GLIBC_2.2.5
+0000000000401790 T symlist_display
+0000000000405080 D __TMC_END__
+                 U 
