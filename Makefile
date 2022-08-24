@@ -6,7 +6,7 @@
 #    By: bahaas <bahaas@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/04 15:07:09 by bahaas            #+#    #+#              #
-#    Updated: 2022/07/26 19:54:35 by bahaas           ###   ########.fr        #
+#    Updated: 2022/08/07 23:19:56 by bahaas           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,7 @@ ft_nm: 	${OBJS}
 			@make -C libft/ --no-print-directory -s
 			@${CC} ${CFLAGS} ${HEADER} ${OBJS} -o ${NAME} -L libft/ -lft -lm
 			@echo "\033[34m[FT_NM]\033[0m Building ft_nm program : \033[32mOK\033[0m"
+
 
 t:	 	${OBJS}
 			@printf "\n"

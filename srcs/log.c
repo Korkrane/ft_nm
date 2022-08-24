@@ -39,8 +39,10 @@ void logPrintSymbol(Elf64_Sym *symbol, char *ptr, Elf64_Shdr *shstr)
     printf("st_name %u (%s)\n", symbol->st_name, ptr + shstr->sh_offset + symbol->st_name); /* Symbol name, index in string tbl */
     printf("st_info %u\n", symbol->st_info);                                                /* Type and binding attributes */
     printf("st_other %u\n", symbol->st_other);                                              /* No defined meaning, 0 */
-    printf("st_shndx %u\n", symbol->st_shndx);                                              /* Associated section index */
-    printf("st_value %lu (%s)\n", symbol->st_value, hex_value(symbol->st_value));           /* Value of the symbol */
+    printf("st_shndx %u\n", symbol->st_shndx);                                            /* Associated section index */
+    char *s = getHexValue(symbol->st_value);
+    printf("st_value %lu (%s)\n", symbol->st_value, s);           /* Value of the symbol */
+
     printf("st_size %lu\n", symbol->st_size);                                               /* Associated symbol size */
     printf("ELF64_ST_TYPE: %d, ELF64_ST_BIND:%d\n", ELF64_ST_TYPE(symbol->st_info), ELF64_ST_BIND(symbol->st_info));
     if (ELF64_ST_BIND(symbol->st_info) == STB_LOCAL)
@@ -49,5 +51,21 @@ void logPrintSymbol(Elf64_Sym *symbol, char *ptr, Elf64_Shdr *shstr)
         printf("WEAK\n");
     else if (ELF64_ST_BIND(symbol->st_info) == STB_GLOBAL)
         printf("GLOBAL\n");
-    printf("%s %s\n", hex_value(symbol->st_value), ptr + shstr->sh_offset + symbol->st_name); // FOR EASY DISPLAY
+    printf("%s %s\n", s, ptr + shstr->sh_offset + symbol->st_name); // FOR EASY DISPLAY
+    free(s);
+}
+
+void logPrintEnabledOptions()
+{
+	printf("--- OPTIONS ENABLED ---\n");
+	if(options & a)
+		printf("a opt enabled\n");
+	if(options & g)
+		printf("g opt enabled\n");
+	if(options & u)
+		printf("u opt enabled\n");
+	if(options & r)
+		printf("r opt enabled\n");
+	if(options & p)
+		printf("p opt enabled\n");
 }

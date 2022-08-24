@@ -22,25 +22,57 @@
 #include <sys/mman.h>
 #include <elf.h>
 
+typedef enum e_flags
+{
+	a = 1 << 0,
+	g = 1 << 1,
+	u = 1 << 2,
+	r = 1 << 3,
+	p = 1 << 4,
+} t_flags;
+
 typedef struct t_sym
 {
-    char *value;
+    char *hexValue;
     char *name;
     char symbol;
     char *firstLetterInName;
+    int shndx;
     struct t_sym *next;
-    //struct t_sym *prev;
 } t_sym;
+
+extern char *file;
+
+int help();
+void addOptionWithoutParameter(char opt);
+int parsing(int ac, char **av);
+
+bool getFileStatus(struct stat *buf, int fd);
+bool openFile(char *path, int *fd);
+void closeFile(int fd);
+
+bool hasElfMagicNumber(char *ptr);
+bool is64bitArchitecture(char *ptr);
+bool is32bitArchitecture(char *ptr);
+bool isInvalidClass(char *ptr);
+
+void sortOutput(t_sym **symList);
+void displayOutput(t_sym *sym);
 
 t_sym *ft_symnew(void);
 void ft_symadd_back(t_sym **asym, t_sym *new);
-void symlist_display(t_sym *sym);
+void displayOutput(t_sym *sym);
+void freeSymbols(t_sym **lst);
 
+void reverse_sort_symlist(struct t_sym **head);
 void sort_symlist(struct t_sym **head);
 
 void logPrintSymbol(Elf64_Sym *symbol, char *ptr, Elf64_Shdr *shstr);
 void logPrintSection(Elf64_Shdr *section, char *ptr, int i, Elf64_Shdr *shstrhdr);
 void logPrintHeader(Elf64_Ehdr *header);
 
-char *hex_value(int lul);
+char *getHexValue(int value)
+void logPrintEnabledOptions();
+
+int errorExit(char *cmd);
 #endif
