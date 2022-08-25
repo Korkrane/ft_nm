@@ -67,7 +67,7 @@ void sortedInsert(struct t_sym **head, struct t_sym *newNode)
 
     //printf("%s, %s\n", current->next->firstLetterInName, newNode->firstLetterInName);
     //while (current->next != NULL && current->next->firstLetterInName < newNode->firstLetterInName)
-    while (current->next != NULL && current->next->firstLetterInName != NULL && strcmp(current->next->firstLetterInName, newNode->firstLetterInName) < 0)
+    while (current->next != NULL && current->next->firstLetterInName != NULL && strcmp(current->next->firstLetterInName, newNode->firstLetterInName) < 0) //TODO CHECK ON SAME NAME
     {
             current = current->next;
     }

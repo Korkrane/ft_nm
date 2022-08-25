@@ -6,13 +6,14 @@
 /*   By: bahaas <bahaas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 18:38:04 by bahaas            #+#    #+#             */
-/*   Updated: 2022/08/08 16:30:34 by bahaas           ###   ########.fr       */
+/*   Updated: 2022/08/25 18:13:36 by bahaas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_nm.h"
 
-char *file = "a.out";
+char **files;
+char *currentFile;
 
 int errorExit(char *cmd)
 {
@@ -66,38 +67,92 @@ char *save_first_letter(char *str)
 
 char set_symbol(Elf64_Sym *sym, Elf64_Shdr *sectionHeaderStringTable, Elf64_Shdr *section, char *ptr, Elf64_Shdr *shstr, Elf64_Ehdr *header)
 {
-	if (ft_strcmp(ptr + shstr->sh_offset + sym->st_name, "main") == 0)
-	{
-		printf("lol\nlol\nlol\n");
-		printf("Section name = %u (%s)\n", section->sh_name, ptr + sectionHeaderStringTable->sh_offset + section->sh_name);
+	// if (ft_strcmp(ptr + shstr->sh_offset + sym->st_name, "main") == 0)
+	// {
+		//printf("Section name = %u (%s)\n", section->sh_name, ptr + sectionHeaderStringTable->sh_offset + section->sh_name);
 		Elf64_Shdr *tsection = (Elf64_Shdr *)(ptr + header->e_shoff + (header->e_shentsize * sym->st_shndx));
-		printf("Section name = %u (%s)\n", tsection->sh_name, ptr + sectionHeaderStringTable->sh_offset + tsection->sh_name);
-	}
+		//printf("Section name = %u (%s)\n", tsection->sh_name, ptr + sectionHeaderStringTable->sh_offset + tsection->sh_name);
+	// }
 	Elf64_Shdr *linkedSection = (Elf64_Shdr *)(ptr + header->e_shoff + (header->e_shentsize * sym->st_shndx));
 	char *linkedSectionName = ptr + sectionHeaderStringTable->sh_offset + linkedSection->sh_name;
-
+	//printf("Section name === (%s)\n", linkedSectionName);
 
 	// if (sym->st_shndx == 13 && ELF64_ST_BIND(sym->st_info) == STB_LOCAL)
-	if (ft_strcmp(linkedSectionName, ".text") == 0 && ELF64_ST_BIND(sym->st_info) == STB_LOCAL)
-		return 't';
-	if (ft_strcmp(linkedSectionName, ".text") == 0 && ELF64_ST_BIND(sym->st_info) == STB_GLOBAL)
-		return 'T';
-	if (ft_strcmp(linkedSectionName, ".bss") == 0 && ELF64_ST_BIND(sym->st_info) == STB_LOCAL)
-		return 'b';
-	if (ft_strcmp(linkedSectionName, ".bss") == 0 && ELF64_ST_BIND(sym->st_info) == STB_GLOBAL)
-		return 'B';
-	if (ft_strcmp(linkedSectionName, ".data") == 0 && ELF64_ST_BIND(sym->st_info) == STB_LOCAL)
-		return 'd';
-	if (ft_strcmp(linkedSectionName, ".data") == 0 && ELF64_ST_BIND(sym->st_info) == STB_GLOBAL)
-		return 'D';
-	if (ELF64_ST_BIND(sym->st_info) == STB_WEAK && sym->st_value != 0)
-		return 'W';
-	if (ELF64_ST_BIND(sym->st_info) == STB_WEAK && ELF64_ST_TYPE(sym->st_info) == STT_NOTYPE)
-		return 'w';
+	// if (ft_strcmp(linkedSectionName, ".text") == 0 && ELF64_ST_BIND(sym->st_info) == STB_LOCAL)
+	// 	return 't';
+	// if (ft_strcmp(linkedSectionName, ".text") == 0 && ELF64_ST_BIND(sym->st_info) == STB_GLOBAL)
+	// 	return 'T';
+	// if (ft_strcmp(linkedSectionName, ".bss") == 0 && ELF64_ST_BIND(sym->st_info) == STB_LOCAL)
+	// 	return 'b';
+	// if (ft_strcmp(linkedSectionName, ".bss") == 0 && ELF64_ST_BIND(sym->st_info) == STB_GLOBAL)
+	// 	return 'B';
+	// if (ft_strcmp(linkedSectionName, ".data") == 0 && ELF64_ST_BIND(sym->st_info) == STB_LOCAL)
+	// 	return 'd';
+	// if (ft_strcmp(linkedSectionName, ".data") == 0 && ELF64_ST_BIND(sym->st_info) == STB_GLOBAL)
+	// 	return 'D';
+	// if (ELF64_ST_BIND(sym->st_info) == STB_WEAK && sym->st_value != 0)
+	// 	return 'W';
+	// if (ELF64_ST_BIND(sym->st_info) == STB_WEAK && ELF64_ST_TYPE(sym->st_info) == STT_NOTYPE)
+	// 	return 'w';
 
-	if (sym->st_shndx == 0)
-		return 'U';
-	return '.';
+	// if (sym->st_shndx == 0)
+	// 	return 'U';
+	char res = '.';
+	// if (ft_strcmp(linkedSectionName, ".bss") == 0 && ELF64_ST_BIND(sym->st_info) == STB_LOCAL)
+	// 	res = 'b';
+	// if (ft_strcmp(linkedSectionName, ".bss") == 0 && ELF64_ST_BIND(sym->st_info) == STB_GLOBAL)
+	// 	res = 'B';
+
+	if (tsection->sh_type == SHT_NOBITS)
+		res = (tsection->sh_flags & SHF_IA_64_SHORT) ? 'S' : 'B';
+	else if (tsection->sh_type == SHT_IA_64_UNWIND)
+		res = 'p';
+	else if ((tsection->sh_flags & (SHF_ALLOC | SHF_EXECINSTR | SHF_WRITE)) == SHF_ALLOC)
+		res = 'R';
+	else if ((tsection->sh_flags & (SHF_ALLOC | SHF_EXECINSTR | SHF_WRITE)) == (SHF_ALLOC | SHF_WRITE))
+		res = (tsection->sh_flags & SHF_IA_64_SHORT) ? 'G' : 'D';
+	else if (tsection->sh_flags == 0)
+		res = 'N';
+	if ((tsection->sh_flags & (SHF_ALLOC | SHF_EXECINSTR | SHF_WRITE)) == (SHF_ALLOC | SHF_EXECINSTR))
+		res = 'T';
+
+	if (ELF64_ST_BIND(sym->st_info) == STB_GNU_UNIQUE)
+		res = 'u';
+	else if (ELF64_ST_TYPE(sym->st_info) == STT_GNU_IFUNC)
+		res = 'i';
+	else if (ELF64_ST_BIND(sym->st_info) == STB_WEAK)
+	{
+		if (ELF64_ST_TYPE(sym->st_info) == STT_OBJECT)
+			res = (sym->st_shndx == SHN_UNDEF) ? 'v' : 'V';
+		else
+			res = (sym->st_shndx == SHN_UNDEF) ? 'w' : 'W';
+	}
+	else if (sym->st_shndx == SHN_UNDEF)
+		res = 'U';
+	else if (sym->st_shndx == SHN_ABS)
+		res = 'A';
+	else if (sym->st_shndx == SHN_COMMON)
+		res = 'C';
+
+	if (ft_strchr("?uvwpi", res) == NULL && ELF64_ST_BIND(sym->st_info) == STB_LOCAL)
+		res += 'a' - 'A';
+	// switch (ELF64_ST_TYPE(sym->st_info))
+	// {
+	// 	case STT_FUNC:
+	// 		if (sym->st_shndx == 0)
+	// 			res = 'u';
+	// 		else
+	// 			res = 't';
+	// 		break;
+	// 	case STT_LOOS:
+	// 		res = 'i';
+	// 		break;
+	// 	case STT_SECTION:
+	// 		res = 'n';
+	// 		break;
+	// }
+
+	return res;
 }
 
 void handle64(char *ptr)
@@ -130,7 +185,7 @@ void handle64(char *ptr)
 			// same technique than sectionHeaderStringTable, to place us on the good section : ptr + the header offset + size of a secton times the section index
 			shstr = (Elf64_Shdr *)(ptr + header->e_shoff + (header->e_shentsize * section->sh_link));
 			int tot = 0;
-			for (int j = 0; j < nSymbols; j++)
+			for (int j = 1; j < nSymbols; j++) /* starts from 1 bc 1st symbol is null */
 			{
 				// ptr + section offset + size * symbols index
 				symbol = (Elf64_Sym *)(ptr + section->sh_offset + (section->sh_entsize* j));
@@ -169,7 +224,7 @@ void handle32(char *ptr)
 	#endif
 }
 
-void nm(char *ptr)
+void nm(char *ptr, char *file)
 {
 	if (hasElfMagicNumber(ptr))
 	{
@@ -183,30 +238,66 @@ void nm(char *ptr)
 			printf("ft_nm: %s: file format not recognized\n", file);
 	}
 	else
-		printf("ft_nm: %s: file format not recognized\n", file);
+		printf("ft_nm: %s: file format not recognized cuw not magic number\n", file);
 }
 
 
+bool hasOneFileToCheck()
+{
+	int res = 0;
+	for(int i = 0; files[i] != NULL; i++)
+		res++;
+	if(res == 1)
+		return true;
+	return false;
+}
+
+void free_split(char ***split)
+{
+	int i;
+
+	i = -1;
+	while ((*split)[++i])
+	{
+		free((*split)[i]);
+		(*split)[i] = NULL;
+	}
+	free(*split);
+	*split = NULL;
+}
 
 int main(int ac, char **av)
 {
-	int			fd;
-	char		*ptr;
-	struct stat	buf;
+	int fd;
+	char *ptr;
+	struct stat buf;
 
 	if(parsing(ac, av))
 	{
-		if(!openFile(file, &fd))
-			return errorExit("open");
-		if(!getFileStatus(&buf, fd))
-			return errorExit("fstat");
-		if((ptr = mmap(0, buf.st_size, PROT_READ, MAP_PRIVATE, fd, 0)) == MAP_FAILED)
-			return errorExit("mmap");
+		for (int i = 0; files[i] != NULL; i++)
+		{
+			currentFile = files[i];
+			if(!openFile(files[i], &fd))
+			{
+				if(hasOneFileToCheck())
+				{
+					free_split(&files);
+					return errorExit("open");
+				}
+				errorExit("open");
+				continue;
+			} //TODO refacto in a functio whti str* param for the command failing do it for dstat mmap and munmap
+			if(!getFileStatus(&buf, fd))
+				return errorExit("fstat");
+			if((ptr = mmap(0, buf.st_size, PROT_READ, MAP_PRIVATE, fd, 0)) == MAP_FAILED)
+				return errorExit("mmap");
 
-		nm(ptr);
-		if(munmap(ptr, buf.st_size) < 0)
-			return errorExit("munmap");
-		closeFile(fd);
+			nm(ptr, files[i]);
+			if(munmap(ptr, buf.st_size) < 0)
+				return errorExit("munmap");
+			closeFile(fd);
+		}
+		free_split(&files); //TODO it in case of failure too :)
 	}
 	return (EXIT_SUCCESS);
 }

@@ -69,3 +69,12 @@ void logPrintEnabledOptions()
 	if(options & p)
 		printf("p opt enabled\n");
 }
+
+void logPrintArguments()
+{
+    printf("--- FILES TO USE WITH NM ---\n");
+    for (int i = 0; files[i] != NULL; i++)
+    {
+        printf("%s\n", files[i]);
+    }
+}

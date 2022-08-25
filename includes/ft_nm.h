@@ -41,7 +41,8 @@ typedef struct t_sym
     struct t_sym *next;
 } t_sym;
 
-extern char *file;
+extern char **files;
+extern char *currentFile;
 
 int help();
 void addOptionWithoutParameter(char opt);
@@ -70,9 +71,12 @@ void sort_symlist(struct t_sym **head);
 void logPrintSymbol(Elf64_Sym *symbol, char *ptr, Elf64_Shdr *shstr);
 void logPrintSection(Elf64_Shdr *section, char *ptr, int i, Elf64_Shdr *shstrhdr);
 void logPrintHeader(Elf64_Ehdr *header);
+void logPrintArguments();
 
-char *getHexValue(int value)
+char *getHexValue(int value);
 void logPrintEnabledOptions();
 
 int errorExit(char *cmd);
+
+bool hasOneFileToCheck();
 #endif
