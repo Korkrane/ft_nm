@@ -60,14 +60,14 @@ int parsing(int ac, char **av)
 		}
 
 	}
-
+	//si pas d'argumetns on mets par defaut a.out a check
 	if(totalArguments == 0)
 	{
 		files = malloc(sizeof(char *) * (2));
 		files[0] = ft_strdup("a.out");
 		files[1] = NULL;
 	}
-	else
+	else //autrements on va append chaque argument a la liste de fichier //inclure ici le recursive files
 	{
 		files = malloc(sizeof(char *) * (totalArguments + 1));
 		for (int i = 0; i < totalArguments; i++)

@@ -8,7 +8,7 @@ void sortOutput(t_sym **symList)
 		sort_symlist(symList);
 }
 
-void displayOutput(t_sym *sym)
+void displayOutput(t_sym *sym, char *ptr)
 {
 	t_sym *tmp = sym;
 
@@ -20,10 +20,21 @@ void displayOutput(t_sym *sym)
 			;
 		else
 		{
-			if (ft_strcmp(tmp->hexValue, "0000000000000000") == 0)
-				printf("%18c %s\n", tmp->symbol, tmp->name);
+			if(is64bitArchitecture(ptr))
+			{
+				if (ft_strcmp(tmp->hexValue, "0000000000000000") == 0)
+					printf("%18c %s\n", tmp->symbol, tmp->name);
+				else
+					printf("%s %c %s\n", tmp->hexValue, tmp->symbol, tmp->name);
+			}
 			else
-				printf("%s %c %s\n", tmp->hexValue, tmp->symbol, tmp->name);
+			{
+				if (ft_strcmp(tmp->hexValue, "00000000") == 0)
+					printf("%10c %s\n", tmp->symbol, tmp->name);
+				else
+					printf("%s %c %s\n", tmp->hexValue, tmp->symbol, tmp->name);
+			}
+
 		}
 		tmp = tmp->next;
 	}
