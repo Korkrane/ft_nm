@@ -4,12 +4,12 @@ int help()
 {
 	fprintf(stderr, "Usage\n  ./ft_nm [options] <objfile>\n"
 					"\nOptions:\n"
-					"  -h\t\t		print help and exit\n"
-					"  -a\t\t		Display debbuger-only symbols\n"
-					"  -g\t\t		Display only externals symbols\n"
-					"  -u\t\t		Display only undefined symbols\n"
-					"  -r\t\t		Reverse the sense of the sort\n"
-					"  -p\t\t		Do not sort the symbols\n");
+					"  -h\tprint help and exit\n"
+					"  -a\tDisplay debbuger-only symbols\n"
+					"  -g\tDisplay only externals symbols\n"
+					"  -u\tDisplay only undefined symbols\n"
+					"  -r\tReverse the sense of the sort\n"
+					"  -p\tDo not sort the symbols\n");
 	return 0;
 }
 
@@ -27,6 +27,9 @@ void addOptionWithoutParameter(char opt)
 
 int parsing(int ac, char **av)
 {
+	int firstArgument = 0;
+	int totalArguments = 0;
+	int firstArgumentIndex = 0;
 	for (int i = 1; i < ac; i++)
 	{
 		if (av[i][0] == '-')
@@ -48,12 +51,32 @@ int parsing(int ac, char **av)
 		}
 		else
 		{
-			file = av[i];
-			#ifdef DEBUG
-				logPrintEnabledOptions();
-			#endif
-			return (true);
+			if(firstArgument == 0)
+			{
+				firstArgumentIndex = i;
+				firstArgument = 1;
+			}
+			totalArguments++;
 		}
+
 	}
+	//si pas d'argumetns on mets par defaut a.out a check
+	if(totalArguments == 0)
+	{
+		files = malloc(sizeof(char *) * (2));
+		files[0] = ft_strdup("a.out");
+		files[1] = NULL;
+	}
+	else //autrements on va append chaque argument a la liste de fichier //inclure ici le recursive files
+	{
+		files = malloc(sizeof(char *) * (totalArguments + 1));
+		for (int i = 0; i < totalArguments; i++)
+			files[i] = ft_strdup(av[i + firstArgumentIndex]);
+		files[totalArguments] = NULL;
+	}
+	#ifdef DEBUG
+		logPrintEnabledOptions();
+		logPrintArguments();
+	#endif
 	return true;
 }

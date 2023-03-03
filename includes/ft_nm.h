@@ -41,7 +41,8 @@ typedef struct t_sym
     struct t_sym *next;
 } t_sym;
 
-extern char *file;
+extern char **files;
+extern char *currentFile;
 
 int help();
 void addOptionWithoutParameter(char opt);
@@ -57,11 +58,10 @@ bool is32bitArchitecture(char *ptr);
 bool isInvalidClass(char *ptr);
 
 void sortOutput(t_sym **symList);
-void displayOutput(t_sym *sym);
+void displayOutput(t_sym *sym, char *ptr);
 
 t_sym *ft_symnew(void);
 void ft_symadd_back(t_sym **asym, t_sym *new);
-void displayOutput(t_sym *sym);
 void freeSymbols(t_sym **lst);
 
 void reverse_sort_symlist(struct t_sym **head);
@@ -70,9 +70,12 @@ void sort_symlist(struct t_sym **head);
 void logPrintSymbol(Elf64_Sym *symbol, char *ptr, Elf64_Shdr *shstr);
 void logPrintSection(Elf64_Shdr *section, char *ptr, int i, Elf64_Shdr *shstrhdr);
 void logPrintHeader(Elf64_Ehdr *header);
+void logPrintArguments();
 
-char *getHexValue(int value)
+char *getHexValue(int value, char *ptr);
 void logPrintEnabledOptions();
 
 int errorExit(char *cmd);
+
+bool hasOneFileToCheck();
 #endif

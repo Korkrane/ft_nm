@@ -2,7 +2,7 @@
 
 bool openFile(char *path, int *fd)
 {
-	if((*fd = open(file, O_RDONLY)) < 0)
+	if((*fd = open(path, O_RDONLY)) < 0)
 		return false;
 	return true;
 }
